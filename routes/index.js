@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var RateLimit = require('express-rate-limit');
-//var connectionMgr = require('../util');
+//var connectionMgr = require('../connectHelper');
 //var assert = require('assert');
 
 var loginLimiter = new RateLimit({

@@ -1,7 +1,7 @@
 var express = require('express');
 //var compression = require('compression')
 var path = require('path');
-var util = require('./util');
+var connectionMgr = require('./connectHelper');
 //var favicon = require('serve-favicon');
 var logger = require('morgan');
 //var cookieParser = require('cookie-parser');
@@ -54,7 +54,7 @@ app.use(session({
     resave: false, //don't save session if unmodified
     saveUninitialized: false, // don't create session until something stored
     store: new MongoStore({
-        url: util.connectionURI('config') + '?authSource=admin&w=1',
+        url: connectionMgr.connectionURI('config') + '?authSource=admin&w=1',
         touchAfter: 24 * 3600 // time period in seconds
     }),
     cookie: { 
