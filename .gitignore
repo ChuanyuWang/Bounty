@@ -1,0 +1,7 @@
+node_modules/
+.sass-cache
+logs/
+public/js
+credentials.js
+.vscode
+.eslintcache
