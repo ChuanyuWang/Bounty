@@ -31,6 +31,9 @@ module.exports = {
         bootstrap_table_locale_zh_CN: '//cdn.bootcss.com/bootstrap-table/1.12.1/locale/bootstrap-table-zh-CN.min.js',
         bootstrap_datetimepicker: '//cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js',
         bootstrap_datetimepicker_css: '//cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css',
-        bootbox: '//cdn.bootcss.com/bootbox.js/4.4.0/bootbox.min.js'
+        bootbox: '//cdn.bootcss.com/bootbox.js/4.4.0/bootbox.min.js',
+        vuetify: '//cdn.staticfile.org/vuetify/1.1.1/vuetify.min.js',
+        vuetify_dev: '//cdn.staticfile.org/vuetify/1.1.1/vuetify.js',
+        vuetify_css: '//cdn.staticfile.org/vuetify/1.1.1/vuetify.min.css'
     }
 };

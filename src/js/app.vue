@@ -3,8 +3,20 @@
 </style>
 
 <template lang="pug">
-div.container
-  p TODO
+v-app
+  v-toolbar(app)
+    v-toolbar-side-icon(@click.stop="drawer = !drawer")
+    v-toolbar-title Application
+  v-navigation-drawer(app,v-model="drawer")
+    v-list(dense)
+      v-list-tile(@click="")
+        v-list-tile-action
+          v-icon home
+        v-list-tile-content
+          v-list-tile-title Home
+  v-content
+    v-container {{imageHeight}}
+  v-footer(app) 沪ICP备16016548号-3
 </template>
 
 <script>
@@ -21,11 +33,23 @@ module.exports = {
   },
   data: function() {
     return {
-      result: ""
+      drawer: null
     };
   },
-  components: {},
-  computed: {},
+  components: {
+  },
+  computed: {
+    imageHeight: function () {
+      console.log(this.$vuetify.breakpoint.name)
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs': return '220px'
+        case 'sm': return '400px'
+        case 'md': return '500px'
+        case 'lg': return '600px'
+        case 'xl': return '800px'
+      }
+    }
+  },
   filters: {},
   methods: {},
   created: function() {
@@ -33,6 +57,7 @@ module.exports = {
   },
   mounted: function() {
     //var vm = this;
+    //console.log(this.$vuetify.breakpoint.name)
   }
 };
 </script>
