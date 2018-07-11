@@ -9,22 +9,50 @@ v-app
     v-toolbar-title Application
   v-navigation-drawer(app,v-model="drawer")
     v-list(dense)
-      v-list-tile(@click="")
+      v-list-tile(@click="" to="/home")
         v-list-tile-action
           v-icon home
         v-list-tile-content
           v-list-tile-title Home
+      v-list-tile(@click="" to="/edit")
+        v-list-tile-action
+          v-icon attach_money
+        v-list-tile-content
+          v-list-tile-title Bonus Plan
   v-content
-    v-container {{imageHeight}}
+    v-container
+      router-view
   v-footer(app) 沪ICP备16016548号-3
 </template>
 
 <script>
 /**
  * --------------------------------------------------------------------------
- * test-console display a panel for testing robot god
+ * Top application of bonus tool
  * --------------------------------------------------------------------------
  */
+
+var UserHome = { template: '<div>Home</div>' }
+var UserLogin = { template: '<div>Login</div>' }
+var UserPosts = { template: '<div>Posts</div>' }
+
+var router = new VueRouter({
+  routes: [
+    { path: '/', component: UserLogin },
+    { path: '/home', component: UserHome,
+      children: [				
+        // UserProfile will be rendered inside User's <router-view>
+        // when /user/:id/profile is matched
+        { path: 'profile', component: null },
+
+        // UserPosts will be rendered inside User's <router-view>
+        // when /user/:id/posts is matched
+        { path: 'posts', component: null }
+      ]
+    },
+    { path: '/edit', component: UserPosts }
+  ]
+});
 
 module.exports = {
   name: "app",
@@ -36,6 +64,7 @@ module.exports = {
       drawer: null
     };
   },
+  router: router,
   components: {
   },
   computed: {

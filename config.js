@@ -24,6 +24,8 @@ module.exports = {
         momentjs_dev: '//cdn.bootcss.com/moment.js/2.22.1/moment-with-locales.js',
         vue: '//cdn.bootcss.com/vue/2.5.16/vue.min.js',
         vue_dev: '//cdn.bootcss.com/vue/2.5.16/vue.js',
+        vue_router: '//cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js',
+        vue_router_dev: '//cdn.bootcss.com/vue-router/3.0.1/vue-router.js',
         i18next: '//cdn.bootcss.com/i18next/11.3.2/i18next.min.js',
         i18next_dev: '//cdn.bootcss.com/i18next/11.3.2/i18next.js',
         bootstrap_table_css: '//cdn.bootcss.com/bootstrap-table/1.12.1/bootstrap-table.min.css',
