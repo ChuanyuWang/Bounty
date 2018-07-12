@@ -35,7 +35,7 @@ module.exports = {
         bootstrap_datetimepicker_css: '//cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css',
         bootbox: '//cdn.bootcss.com/bootbox.js/4.4.0/bootbox.min.js',
         vuetify: 'https://cdn.staticfile.org/vuetify/1.1.1/vuetify.min.js',
-        vuetify_dev: 'https://cdn.staticfile.org/vuetify/1.1.1/vuetify.js',
-        vuetify_css: '//cdn.staticfile.org/vuetify/1.1.1/vuetify.min.css'
+        vuetify_dev: 'https://cdnjs.cloudflare.com/ajax/libs/vuetify/1.1.4/vuetify.js',
+        vuetify_css: 'https://cdnjs.cloudflare.com/ajax/libs/vuetify/1.1.4/vuetify.min.css'
     }
 };
