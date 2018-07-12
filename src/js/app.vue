@@ -20,8 +20,7 @@ v-app
         v-list-tile-content
           v-list-tile-title Bonus Plan
   v-content
-    v-container
-      router-view
+    router-view
   v-footer(app) 沪ICP备16016548号-3
 </template>
 
@@ -32,14 +31,10 @@ v-app
  * --------------------------------------------------------------------------
  */
 
-var UserHome = { template: '<div>Home</div>' }
-var UserLogin = { template: '<div>Login</div>' }
-var UserPosts = { template: '<div>Posts</div>' }
-
 var router = new VueRouter({
   routes: [
-    { path: '/', component: UserLogin },
-    { path: '/home', component: UserHome,
+    { path: '/', component: require('./login.vue') },
+    { path: '/home', component: require('./home.vue'),
       children: [				
         // UserProfile will be rendered inside User's <router-view>
         // when /user/:id/profile is matched
@@ -50,7 +45,7 @@ var router = new VueRouter({
         { path: 'posts', component: null }
       ]
     },
-    { path: '/edit', component: UserPosts }
+    { path: '/edit', component: require('./edit.vue') }
   ]
 });
 
