@@ -69,7 +69,7 @@ app.use(session({
 
 //i18n configuration
 i18n.configure({
-    locales: ['zh'],
+    locales: ['zh', 'en'],
     // where to store json files
     directory: __dirname + '/locales',
     defaultLocale: 'zh',
