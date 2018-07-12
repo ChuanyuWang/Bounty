@@ -47,6 +47,8 @@
     "vueify": "^9.4.1"
   },
   "browserify-shim": {
-    "vue": "global:Vue"
+    "vue": "global:Vue",
+    "VueRouter": "global:VueRouter",
+    "Vuetify": "global:Vuetify"
   }
 }
