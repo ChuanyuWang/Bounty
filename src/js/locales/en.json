@@ -1,4 +1,8 @@
 {
+    "my_bonus_plan": "My Bonus Plan",
+    "home": "Home",
+    "editor": "Bonus Editor",
+    "app_title": "Bounty",
     "name": "Name",
     "draft": "Draft",
     "released": "Released",
