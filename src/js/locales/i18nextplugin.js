@@ -16,7 +16,7 @@ var i18nextPlugin = {
         if (i18next) {
             // more options refer to https://www.i18next.com/configuration-options.html
             i18next.use(i18nextBrowserLanguageDetector).init({
-                lng: "zh", // remove this line to enable auto language detection
+                //lng: "zh", // remove this line to enable auto language detection
                 fallbackLng: "en",
                 resources: resources,
                 detection: { lookupQuerystring: 'lang' }

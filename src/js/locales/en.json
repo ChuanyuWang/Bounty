@@ -1,2 +1,10 @@
 {
+    "name": "Name",
+    "draft": "Draft",
+    "released": "Released",
+    "status": "Status",
+    "amount": "Amount",
+    "quantity": "Quantity",
+    "actions": "Actions",
+    "create": "Create"
 }
