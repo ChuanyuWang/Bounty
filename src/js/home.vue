@@ -3,11 +3,11 @@
 
 <template lang="pug">
 v-container
-  v-toolbar(flat color="white")
-    v-toolbar-title My Bouns Plan
+  v-toolbar(flat)
+    v-toolbar-title {{$t('my_bonus_plan')}}
     v-divider.mx-2(inset vertical)
     v-spacer
-    v-btn(color="primary" dark) {{$t('create')}}
+    v-btn(color="primary" to='/edit') {{$t('create')}}
   v-data-table(:headers="headers" :items="desserts" hide-actions class="elevation-1")
     template(slot="items" slot-scope="props")
       td {{ props.item.name }}
@@ -45,31 +45,12 @@ module.exports = {
         { text: this.$t("quantity"), value: "quantity" },
         { text: this.$t("actions"), value: "status", sortable: false }
       ],
-      desserts: [],
-      editedIndex: -1,
-      editedItem: {
-        name: "",
-        calories: 0,
-        fat: 0,
-        carbs: 0,
-        protein: 0
-      },
-      defaultItem: {
-        name: "",
-        calories: 0,
-        fat: 0,
-        carbs: 0,
-        protein: 0
-      }
+      desserts: []
     };
   },
   components: {},
   watch: {},
-  computed: {
-    formTitle() {
-      return this.editedIndex === -1 ? "New Item" : "Edit Item";
-    }
-  },
+  computed: {},
   filters: {
     amountFilter(value) {
       return "$" + value;

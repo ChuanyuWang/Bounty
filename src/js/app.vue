@@ -6,22 +6,24 @@
 v-app
   v-toolbar(app)
     v-toolbar-side-icon(@click.stop="drawer = !drawer")
-    v-toolbar-title Application
+    v-toolbar-title {{$t('app_title')}}
   v-navigation-drawer(app,v-model="drawer")
     v-list(dense)
       v-list-tile(@click="" to="/home")
         v-list-tile-action
           v-icon home
         v-list-tile-content
-          v-list-tile-title Home
+          v-list-tile-title {{$t('home')}}
       v-list-tile(@click="" to="/edit")
         v-list-tile-action
           v-icon attach_money
         v-list-tile-content
-          v-list-tile-title Bonus Plan
+          v-list-tile-title {{$t('editor')}}
   v-content
     router-view
-  v-footer(app) 沪ICP备16016548号-3
+  v-footer(app)
+    v-spacer
+    label.caption 沪ICP备16016548号-3
 </template>
 
 <script>
