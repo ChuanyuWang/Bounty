@@ -36,14 +36,16 @@ v-container
       td.text-xs-right {{ props.item.base | currencyFormatter }}
       td.text-xs-right {{ props.item.bonus | currencyFormatter }}
       td.text-xs-right {{ props.item.performance | percentFormatter }}
-      td.text-xs-right {{ props.item.total | currencyFormatter}}
+      td.text-xs-right.green.lighten-1 {{ props.item.total | currencyFormatter}}
       td.justify-center.layout.px-0
         v-icon.mr-2(small @click="editItem(props.item)") edit
         v-icon(small @click="deleteItem(props.item)") delete
     template(slot="footer")
-      td(colspan='100%' style='text-align:right')
-        v-btn.ma-2(color="success") {{$t('calculate')}}
-    </template>
+      td.pa-2(colspan='100%' style='text-align:right')
+        v-layout
+          v-text-field(v-model.number="budget" :label="$t('budget')" mask='##############' prefix='$' solo flat prepend-icon="local_atm")
+          v-btn(color="success" @click='calculate') {{$t('calculate')}}
+  v-alert(v-model="error" dismissible type="error" style='position:absolute;bottom:3px') {{errorMessage}}
 </template>
 
 <script>
@@ -78,6 +80,7 @@ module.exports = {
       ],
       employees: [],
       editedIndex: -1,
+      budget: 150000,
       editedItem: {
         name: "",
         base: 0,
@@ -89,7 +92,9 @@ module.exports = {
         base: 0,
         bonus: 0,
         performance: 100
-      }
+      },
+      error: false,
+      errorMessage: ''
     };
   },
   components: {},
@@ -148,6 +153,28 @@ module.exports = {
         this.employees.push(this.editedItem);
       }
       this.close();
+    },
+
+    calculate() {
+      //Object.assign(this.employees[0], {total: 1000});
+      var total_base = 0;
+      var total_bonus = 0;
+      for (var i =0;i<this.employees.length;i++) {
+        var item = this.employees[i];
+        total_base += item.base;
+        total_bonus += item.bonus * item.performance / 100;
+      }
+      if (this.budget < total_base) {
+        this.errorMessage = "预算小于奖金基数"
+        return this.error = true;
+      }
+
+      var delta = (this.budget - total_base)/total_bonus;
+
+      for (var i =0;i<this.employees.length;i++) {
+        var item = this.employees[i];
+        item.total = item.base + (item.bonus * item.performance * delta) / 100
+      }
     }
   },
   created: function() {

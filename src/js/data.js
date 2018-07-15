@@ -3,178 +3,213 @@ module.exports = [
         name: "员工001",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     },
     {
         name: "员工002",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     },
     {
         name: "员工003",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工004",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工005",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工006",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工007",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工008",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工009",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工010",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }/*, {
         name: "员工011",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工012",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工013",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工014",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工015",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工016",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工017",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工018",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工019",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工020",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工021",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工022",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工023",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工024",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工025",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工026",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工027",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工028",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工029",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工030",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工031",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工032",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工033",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工034",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }, {
         name: "员工035",
         base: 10000,
         bonus: 2000,
-        performance: 100
+        performance: 100,
+        total: 0
     }*/
 ];
