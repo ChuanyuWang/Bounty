@@ -10,5 +10,17 @@
     "amount": "Amount",
     "quantity": "Quantity",
     "actions": "Actions",
-    "create": "Create"
+    "create": "Create",
+    
+    "employee_name": "Name",
+    "base" : "Base",
+    "bonus" : "Bonus",
+    "performance" : "Performance",
+    "total" : "Total",
+    "cancel" : "Cancel",
+    "save" : "Save",
+    "calculate" : "Calculate",
+    "new_employee" : "New employee",
+    "edit_employee" : "Edit employee",
+    "created" : "created"
 }
