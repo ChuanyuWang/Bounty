@@ -23,5 +23,6 @@
     "new_employee" : "New employee",
     "edit_employee" : "Edit employee",
     "created" : "created",
-    "budget": "Budget"
+    "budget": "Budget",
+    "close": "Close"
 }

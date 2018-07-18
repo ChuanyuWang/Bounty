@@ -45,7 +45,8 @@ v-container
         v-layout
           v-text-field(v-model.number="budget" :label="$t('budget')" mask='##############' prefix='$' solo flat prepend-icon="local_atm")
           v-btn(color="success" @click='calculate') {{$t('calculate')}}
-  v-alert(v-model="error" dismissible type="error" style='position:absolute;bottom:3px') {{errorMessage}}
+  v-snackbar(v-model="error" color="error" timeout="5000") {{errorMessage}}
+    v-btn(flat @click="error = false") {{$t('close')}}
 </template>
 
 <script>
