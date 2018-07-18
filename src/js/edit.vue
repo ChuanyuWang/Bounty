@@ -4,14 +4,14 @@
 <template lang="pug">
 v-container
   h2 2018年奖金计划表-生产部
-  v-subheader 刘总经理 {{ new Date().toLocaleString() }} {{$t('created')}}
+  v-subheader 刘总经理 {{ new Date().toLocaleString() }} {{$t('created')}} - {{$t('draft')}}
   v-toolbar(flat)
-    v-btn Import
-    v-btn Export
-    v-btn(color="info") Publish
+    v-btn {{$t('import')}}
+    v-btn {{$t('export')}}
+    v-btn(color="info") {{$t('publish')}}
     v-spacer
     v-dialog(v-model="dialog" max-width="500px")
-      v-btn.mb-2(slot="activator" color="primary" dark) Add Employee
+      v-btn.mb-2(slot="activator" color="primary" dark) {{$t('add_employee')}}
       v-card
         v-card-title
           span.headline {{ formTitle }}
@@ -81,7 +81,7 @@ module.exports = {
       ],
       employees: [],
       editedIndex: -1,
-      budget: 150000,
+      budget: null,
       editedItem: {
         name: "",
         base: 0,

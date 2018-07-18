@@ -1,3 +1,32 @@
 {
-    "name": "名称"
+    "my_bonus_plan": "我的奖金计划",
+    "home": "首页",
+    "editor": "奖金分配",
+    "app_title": "绩效及奖金规划系统",
+    "name": "名称",
+    "draft": "草稿",
+    "released": "已发布",
+    "status": "状态",
+    "amount": "金额",
+    "quantity": "人数",
+    "actions": "操作",
+    "create": "创建",
+    
+    "employee_name": "员工姓名",
+    "base" : "基数",
+    "bonus" : "奖金",
+    "performance" : "绩效",
+    "total" : "总数",
+    "cancel" : "取消",
+    "save" : "保存",
+    "calculate" : "计算",
+    "add_employee": "添加员工",
+    "new_employee" : "新建员工",
+    "edit_employee" : "编辑员工",
+    "created" : "创建",
+    "budget": "预算",
+    "close": "关闭",
+    "import": "导入",
+    "export": "导出",
+    "publish": "发布"
 }

@@ -40,10 +40,10 @@ module.exports = {
           align: "left",
           value: "name"
         },
-        { text: this.$t("status"), value: "status" },
-        { text: this.$t("amount"), value: "amount" },
-        { text: this.$t("quantity"), value: "quantity" },
-        { text: this.$t("actions"), value: "status", sortable: false }
+        { text: this.$t("status"), value: "status", align: "right" },
+        { text: this.$t("amount"), value: "amount", align: "right" },
+        { text: this.$t("quantity"), value: "quantity", align: "right" },
+        { text: this.$t("actions"), value: "status", sortable: false, align: "center" }
       ],
       desserts: []
     };

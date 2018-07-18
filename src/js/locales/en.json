@@ -20,9 +20,13 @@
     "cancel" : "Cancel",
     "save" : "Save",
     "calculate" : "Calculate",
+    "add_employee": "Add Employee",
     "new_employee" : "New employee",
     "edit_employee" : "Edit employee",
     "created" : "created",
     "budget": "Budget",
-    "close": "Close"
+    "close": "Close",
+    "import": "Import",
+    "export": "Export",
+    "publish": "Publish"
 }
