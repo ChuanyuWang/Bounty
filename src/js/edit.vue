@@ -19,13 +19,13 @@ v-container
           v-container(grid-list-md)
             v-layout(wrap)
               v-flex(xs12 sm6 md4)
-                v-text-field(v-model="editedItem.name" :label="$t('employee_name')")
+                v-text-field(v-model="editedItem.name" :rules="requiredRules" :label="$t('employee_name')")
               v-flex(xs12 sm6 md4)
-                v-text-field(v-model.number="editedItem.base" :label="$t('base')" prefix='$')
+                v-text-field(v-model.number="editedItem.base" :rules="numberRules" :label="$t('base')" prefix='$')
               v-flex(xs12 sm6 md4)
-                v-text-field(v-model.number="editedItem.bonus" :label="$t('bonus')" prefix='$')
+                v-text-field(v-model.number="editedItem.bonus" :rules="numberRules" :label="$t('bonus')" prefix='$')
               v-flex(xs12 sm6 md4)
-                v-text-field(v-model.number="editedItem.performance" :label="$t('performance')" mask='###' suffix='%')
+                v-text-field(v-model.number="editedItem.performance" :rules="requiredRules" :label="$t('performance')" mask='###' suffix='%')
         v-card-actions
           v-spacer
           v-btn(color="blue darken-1" flat @click.native="close") {{$t('cancel')}}
@@ -94,6 +94,16 @@ module.exports = {
         bonus: 0,
         performance: 100
       },
+      numberRules: [
+        function(v) {
+          return (v !== "" && !isNaN(Number(v))) || "Not valid";
+        }
+      ],
+      requiredRules: [
+        function(v) {
+          return v!== "" || "Not valid";
+        }
+      ],
       error: false,
       errorMessage: ''
     };
@@ -109,7 +119,7 @@ module.exports = {
       return this.editedIndex === -1 ? this.$t('new_employee') : this.$t('edit_employee');
     },
     hasError() {
-      return typeof(this.editedItem.base) !== 'number' || typeof(this.editedItem.bonus) !== 'number' || typeof(this.editedItem.performance) !== 'number';
+      return !this.editedItem.name || typeof(this.editedItem.base) !== 'number' || typeof(this.editedItem.bonus) !== 'number' || typeof(this.editedItem.performance) !== 'number';
     }
   },
   filters: {
