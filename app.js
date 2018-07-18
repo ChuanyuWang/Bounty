@@ -1,12 +1,12 @@
 var express = require('express');
 //var compression = require('compression')
 var path = require('path');
-var connectionMgr = require('./connectHelper');
+//var connectionMgr = require('./connectHelper');
 //var favicon = require('serve-favicon');
 var logger = require('morgan');
 //var cookieParser = require('cookie-parser');
-const session = require('express-session');
-const MongoStore = require('connect-mongo')(session);
+//const session = require('express-session');
+//const MongoStore = require('connect-mongo')(session);
 //var flash = require('connect-flash');
 var config = require('./config');
 var i18n = require('i18n');
@@ -49,6 +49,7 @@ app.use(express.urlencoded({
 
 //app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+/*
 app.use(session({
     secret: 'keyboard god',
     resave: false, //don't save session if unmodified
@@ -66,6 +67,7 @@ app.use(session({
         httpOnly: true 
     }
 }));
+*/
 
 //i18n configuration
 i18n.configure({
