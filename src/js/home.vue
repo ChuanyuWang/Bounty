@@ -7,7 +7,7 @@ v-container
     v-toolbar-title {{$t('my_bonus_plan')}}
     v-divider.mx-2(inset vertical)
     v-spacer
-    v-btn(color="primary" to='/edit') {{$t('create')}}
+    v-btn(color="primary") {{$t('create')}}
   v-data-table(:headers="headers" :items="desserts" hide-actions class="elevation-1")
     template(slot="items" slot-scope="props")
       td {{ props.item.name }}
