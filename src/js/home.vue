@@ -109,6 +109,7 @@ module.exports = {
 
     editItem(item) {
       //TODO
+      this.$router.push('edit');
     },
 
     deleteItem(item) {
