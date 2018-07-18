@@ -21,15 +21,15 @@ v-container
               v-flex(xs12 sm6 md4)
                 v-text-field(v-model="editedItem.name" :label="$t('employee_name')")
               v-flex(xs12 sm6 md4)
-                v-text-field(v-model.number="editedItem.base" :label="$t('base')" mask='##############' prefix='$')
+                v-text-field(v-model.number="editedItem.base" :label="$t('base')" prefix='$')
               v-flex(xs12 sm6 md4)
-                v-text-field(v-model.number="editedItem.bonus" :label="$t('bonus')" mask='##############' prefix='$')
+                v-text-field(v-model.number="editedItem.bonus" :label="$t('bonus')" prefix='$')
               v-flex(xs12 sm6 md4)
                 v-text-field(v-model.number="editedItem.performance" :label="$t('performance')" mask='###' suffix='%')
         v-card-actions
           v-spacer
           v-btn(color="blue darken-1" flat @click.native="close") {{$t('cancel')}}
-          v-btn(color="blue darken-1" flat @click.native="save") {{$t('save')}}
+          v-btn(color="blue darken-1" flat @click.native="save" :disabled="hasError") {{$t('save')}}
   v-data-table(:headers="headers" :items="employees" class="elevation-1")
     template(slot="items" slot-scope="props")
       td {{ props.item.name }}
@@ -45,7 +45,7 @@ v-container
         v-layout
           v-text-field(v-model.number="budget" :label="$t('budget')" mask='##############' prefix='$' solo flat prepend-icon="local_atm")
           v-btn(color="success" @click='calculate') {{$t('calculate')}}
-  v-snackbar(v-model="error" color="error" timeout="5000") {{errorMessage}}
+  v-snackbar(v-model="error" color="error" :timeout="5000") {{errorMessage}}
     v-btn(flat @click="error = false") {{$t('close')}}
 </template>
 
@@ -107,6 +107,9 @@ module.exports = {
   computed: {
     formTitle() {
       return this.editedIndex === -1 ? this.$t('new_employee') : this.$t('edit_employee');
+    },
+    hasError() {
+      return typeof(this.editedItem.base) !== 'number' || typeof(this.editedItem.bonus) !== 'number' || typeof(this.editedItem.performance) !== 'number';
     }
   },
   filters: {
