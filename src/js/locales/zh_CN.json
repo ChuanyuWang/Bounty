@@ -11,6 +11,12 @@
     "quantity": "人数",
     "actions": "操作",
     "create": "创建",
+
+    "login": "登录",
+    "clear": "清空",
+    "email": "E-mail",
+    "password": "密码",
+    "remember_me": "记住我",
     
     "employee_name": "员工姓名",
     "base" : "基数",

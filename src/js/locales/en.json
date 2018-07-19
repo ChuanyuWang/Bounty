@@ -11,6 +11,12 @@
     "quantity": "Quantity",
     "actions": "Actions",
     "create": "Create",
+
+    "login": "Login",
+    "clear": "Clear",
+    "email": "E-mail",
+    "password": "Password",
+    "remember_me": "Remember me",
     
     "employee_name": "Name",
     "base" : "Base",
